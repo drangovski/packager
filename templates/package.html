@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="wrapper">
+	<div>
+		<a class="back" href="{% url 'packages' %}">Go back to Packages</a>
+		<div class="package-wrapper">
+			<h2>{{ package.name }}</h2>
+			<p>{{ package.description }}</p>
+			<div class="section">
+				<h3>Dependencies</h3>
+				<ul>
+					{% for dependency in package.get_dependencies %}
+						<li>{{ dependency }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="section">
+				<h3>Reverse Dependencies</h3>
+				<ul>
+					{% for dependency in package.get_reverse_dependencies %}
+						<li>{{ dependency }}</li>
+					{% endfor %}
+				</ul>
+			</div>
+			<div class="section">
+				<h3>Website</h3>
+				<a href="{{ package.link }}" target="_blank">{{ package.link }}</a>
+			</div>
+		</div>
+	</div>
+</div>
+{% endblock %}

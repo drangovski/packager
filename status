@@ -1,0 +1,340 @@
+Package: libws-commons-util-java
+Status: install ok installed
+Priority: optional
+Section: java
+Installed-Size: 101
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 1.0.1-7
+Description: Common utilities from the Apache Web Services Project
+ This is a small collection of utility classes, that allow high
+ performance XML processing based on SAX.
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Homepage: http://ws.apache.org/commons/util/
+
+Package: python-pkg-resources
+Status: install ok installed
+Priority: optional
+Section: python
+Installed-Size: 175
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: distribute
+Version: 0.6.24-1ubuntu1
+Replaces: python2.3-setuptools, python2.4-setuptools
+Provides: python2.6-setuptools, python2.7-setuptools
+Depends: python (>= 2.6), python (<< 2.8)
+Suggests: python-distribute, python-distribute-doc
+Conflicts: python-setuptools (<< 0.6c8-3), python2.3-setuptools (<< 0.6b2), python2.4-setuptools (<< 0.6b2)
+Description: Package Discovery and Resource Access using pkg_resources
+ The pkg_resources module provides an API for Python libraries to
+ access their resource files, and for extensible applications and
+ frameworks to automatically discover plugins.  It also provides
+ runtime support for using C extensions that are inside zipfile-format
+ eggs, support for merging packages that have separately-distributed
+ modules or subpackages, and APIs for managing Python's current
+ "working set" of active packages.
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Homepage: http://packages.python.org/distribute
+Python-Version: 2.6, 2.7
+
+Package: tcpd
+Status: install ok installed
+Multi-Arch: foreign
+Priority: optional
+Section: net
+Installed-Size: 132
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: tcp-wrappers
+Version: 7.6.q-21
+Replaces: libwrap0 (<< 7.6-8)
+Depends: libc6 (>= 2.4), libwrap0 (>= 7.6-4~)
+Description: Wietse Venema's TCP wrapper utilities
+ Wietse Venema's network logger, also known as TCPD or LOG_TCP.
+ .
+ These programs log the client host name of incoming telnet,
+ ftp, rsh, rlogin, finger etc. requests.
+ .
+ Security options are:
+  - access control per host, domain and/or service;
+  - detection of host name spoofing or host address spoofing;
+  - booby traps to implement an early-warning system.
+Original-Maintainer: Marco d'Itri <md@linux.it>
+
+Package: libc6
+Status: install ok installed
+Multi-Arch: same
+Priority: required
+Section: libs
+Installed-Size: 10412
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: eglibc
+Version: 2.15-0ubuntu10.3
+Replaces: belocs-locales-bin, libc6-amd64
+Provides: glibc-2.13-1
+Depends: libc-bin (= 2.15-0ubuntu10.3), libgcc1, tzdata
+Suggests: glibc-doc, debconf | debconf-2.0, locales
+Breaks: nscd (<< 2.15)
+Conflicts: belocs-locales-bin, libc6-amd64, prelink (<< 0.0.20090925), tzdata (<< 2007k-1), tzdata-etch
+Conffiles:
+ /etc/ld.so.conf.d/x86_64-linux-gnu.conf 593ad12389ab2b6f952e7ede67b8fbbf
+Description: Embedded GNU C Library: Shared libraries
+ Contains the standard libraries that are used by nearly all programs on
+ the system. This package includes shared versions of the standard C library
+ and the standard math library, as well as many others.
+Homepage: http://www.eglibc.org
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+
+Package: python
+Status: install ok installed
+Priority: important
+Section: python
+Installed-Size: 658
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: python-defaults
+Version: 2.7.3-0ubuntu2
+Replaces: python-dev (<< 2.6.5-2)
+Provides: python-ctypes, python-email, python-importlib, python-profiler, python-wsgiref
+Depends: python2.7 (>= 2.7.3), python-minimal (= 2.7.3-0ubuntu2)
+Suggests: python-doc (= 2.7.3-0ubuntu2), python-tk (= 2.7.3-0ubuntu2)
+Breaks: python-bz2 (<< 1.1-8), python-csv (<< 1.0-4), python-email (<< 2.5.5-3), update-manager-core (<< 0.200.5-2)
+Conflicts: python-central (<< 0.5.5)
+Description: interactive high-level object-oriented language (default version)
+ Python, the high-level, interactive object oriented language,
+ includes an extensive class library with lots of goodies for
+ network programming, system administration, sounds and graphics.
+ .
+ This package is a dependency package, which depends on Debian's default
+ Python version (currently v2.7).
+Homepage: http://www.python.org/
+Original-Maintainer: Matthias Klose <doko@debian.org>
+
+Package: bc
+Status: install ok installed
+Priority: standard
+Section: math
+Installed-Size: 320
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 1.06.95-2
+Depends: libc6 (>= 2.4), libncurses5 (>= 5.6+20071006-3), libreadline6, dpkg (>= 1.15.4) | install-info
+Description: The GNU bc arbitrary precision calculator language
+ GNU bc is an interactive algebraic language with arbitrary precision which
+ follows the POSIX 1003.2 draft standard, with several extensions including
+ multi-character variable names, an `else' statement and full Boolean
+ expressions.  GNU bc does not require the separate GNU dc program.
+ Home page: http://directory.fsf.org/GNU/bc.html
+Original-Maintainer: John G. Hasler <jhasler@debian.org>
+
+Package: python-twisted-bin
+Status: install ok installed
+Priority: optional
+Section: python
+Installed-Size: 144
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: twisted
+Version: 11.1.0-1ubuntu2
+Replaces: python2.3-twisted-bin, python2.4-twisted-bin
+Provides: python2.7-twisted-bin
+Depends: python2.7, python (>= 2.7), python (<< 2.8), libc6 (>= 2.3.2)
+Suggests: python-twisted-bin-dbg
+Conflicts: python2.3-twisted-bin, python2.4-twisted-bin
+Description: Event-based framework for internet applications
+ It includes a web server, a telnet server, a multiplayer RPG engine, a
+ generic client and server for remote object access, and APIs for creating
+ new protocols.
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Python-Version: 2.7
+
+Package: python2.7
+Status: install ok installed
+Priority: optional
+Section: python
+Installed-Size: 8783
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 2.7.3-0ubuntu3.1
+Replaces: python-profiler (<= 2.7.1-2)
+Provides: python-argparse, python2.7-argparse, python2.7-celementtree, python2.7-cjkcodecs, python2.7-ctypes, python2.7-elementtree, python2.7-profiler, python2.7-wsgiref
+Depends: python2.7-minimal (= 2.7.3-0ubuntu3.1), mime-support, libbz2-1.0, libc6 (>= 2.15), libdb5.1, libexpat1 (>= 1.95.8), libgcc1 (>= 1:4.1.1), libncursesw5 (>= 5.6+20070908), libreadline6 (>= 6.0), libsqlite3-0 (>= 3.5.9), libtinfo5
+Suggests: python2.7-doc, binutils
+Conflicts: python-profiler (<= 2.7.1-2)
+Description: Interactive high-level object-oriented language (version 2.7)
+ Version 2.7 of the high-level, interactive object oriented language,
+ includes an extensive class library with lots of goodies for
+ network programming, system administration, sounds and graphics.
+Original-Maintainer: Matthias Klose <doko@debian.org>
+
+Package: python2.7-minimal
+Status: install ok installed
+Priority: required
+Section: python
+Installed-Size: 5480
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: python2.7
+Version: 2.7.3-0ubuntu3.1
+Replaces: python2.7 (<< 2.7.1~rc1-2~)
+Depends: libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libssl1.0.0 (>= 1.0.0), zlib1g (>= 1:1.2.0), python-minimal (>= 2.6.6-3+squeeze1)
+Recommends: python2.7
+Suggests: binfmt-support
+Conflicts: binfmt-support (<< 1.1.2)
+Conffiles:
+ /etc/python2.7/sitecustomize.py d6b276695157bde06a56ba1b2bc53670
+Description: Minimal subset of the Python language (version 2.7)
+ This package contains the interpreter and some essential modules.  It can
+ be used in the boot process for some basic tasks.
+ See /usr/share/doc/python2.7-minimal/README.Debian for a list of the modules
+ contained in this package.
+Original-Maintainer: Matthias Klose <doko@debian.org>
+
+Package: usbutils
+Status: install ok installed
+Priority: optional
+Section: utils
+Installed-Size: 661
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 1:005-1
+Depends: libc6 (>= 2.4), libusb-1.0-0 (>= 2:1.0.8), zlib1g (>= 1:1.1.4)
+Suggests: wget (>= 1.8.1-6) | lynx (>= 2.8.4.1b-3)
+Description: Linux USB utilities
+ This package contains the lsusb utility for inspecting the devices
+ connected to the USB bus. It shows a graphical representation of the
+ devices that are currently plugged in, showing the topology of the
+ USB bus. It also displays information on each individual device on
+ the bus.
+ .
+ More information can be found at the Linux USB web site
+ http://www.linux-usb.org/ .
+Original-Maintainer: Aurelien Jarno <aurel32@debian.org>
+
+Package: libdevmapper1.02.1
+Status: install ok installed
+Priority: required
+Section: libs
+Installed-Size: 201
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: lvm2 (2.02.66-4ubuntu7.1)
+Version: 2:1.02.48-4ubuntu7.1
+Provides: libdevmapper
+Depends: libc6 (>= 2.14), libselinux1 (>= 1.32), libudev0 (>= 147), dmsetup (>= 2:1.02.48-4ubuntu7.1)
+Breaks: lvm2 (<< 2.02.66)
+Description: The Linux Kernel Device Mapper userspace library
+ The Linux Kernel Device Mapper is the LVM (Linux Logical Volume Management)
+ Team's implementation of a minimalistic kernel-space driver that handles
+ volume management, while keeping knowledge of the underlying device layout
+ in user-space.  This makes it useful for not only LVM, but EVMS, software
+ raid, and other drivers that create "virtual" block devices.
+ .
+ This package contains the (user-space) shared library for accessing the
+ device-mapper; it allows usage of the device-mapper through a clean,
+ consistent interface (as opposed to through kernel ioctls).
+Homepage: http://sources.redhat.com/lvm2/
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+
+Package: libxi6
+Status: install ok installed
+Multi-Arch: same
+Priority: optional
+Section: libs
+Installed-Size: 142
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Architecture: amd64
+Source: libxi
+Version: 2:1.6.0-0ubuntu2
+Depends: libc6 (>= 2.14), libx11-6 (>= 2:1.4.99.1), libxext6
+Pre-Depends: multiarch-support
+Description: X11 Input extension library
+ libXi provides an X Window System client interface to the XINPUT
+ extension to the X protocol.
+ .
+ The Input extension allows setup and configuration of multiple input devices,
+ and will soon allow hotplugging of input devices; to be added and removed on
+ the fly.
+ .
+ More information about X.Org can be found at:
+ <URL:http://www.X.org>
+ .
+ This module can be found at
+ git://anongit.freedesktop.org/git/xorg/lib/libXi
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+
+Package: libsmbios2
+Status: install ok installed
+Priority: optional
+Section: libs
+Installed-Size: 899
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: libsmbios
+Version: 2.2.28-0ubuntu2
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6)
+Suggests: libsmbios-doc
+Description: Provide access to (SM)BIOS information -- dynamic library
+ libsmbios aims towards providing access to as much BIOS information as
+ possible. It does this by providing a library of functions that can be used
+ as well as sample binaries.
+ .
+ It incorporates extensible access to SMBIOS information capabilities and
+ ability to perform unit tests across multiple systems without using physical
+ hardware. Moreover, centralized, data-driven exception handling for broken
+ BIOS tables is provided. Currently, full access to the SMBIOS table and its
+ items is implemented. Additionally, access and manipulation of Dell Indexed
+ IO Token (type 0xD4) is implemented. This token is a vendor-extention
+ SMBIOS structure which allows uniform access to manipulate the system CMOS
+ to enable, disable, or otherwise manipulate normal BIOS functions or features.
+Original-Maintainer: Jose Luis Tallon <jltallon@adv-solutions.net>
+
+Package: libhtml-tree-perl
+Status: install ok installed
+Priority: optional
+Section: perl
+Installed-Size: 536
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 4.2-1
+Depends: perl, libhtml-parser-perl, libhtml-tagset-perl
+Description: Perl module to represent and create HTML syntax trees
+ HTML::Tree is a collection of modules that represent, create and extract
+ information from HTML syntax trees.  These modules used to be part of
+ the libwww-perl distribution, but are now unbundled in order to
+ facilitate a separate development track.
+Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Homepage: http://search.cpan.org/dist/HTML-Tree/
+
+Package: genisoimage
+Status: install ok installed
+Priority: optional
+Section: otherosfs
+Installed-Size: 1543
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: cdrkit
+Version: 9:1.1.11-2ubuntu2
+Replaces: mkisofs
+Provides: mkisofs
+Depends: libbz2-1.0, libc6 (>= 2.7), libmagic1, zlib1g (>= 1:1.1.4)
+Suggests: wodim, cdrkit-doc
+Conflicts: mkhybrid, mkisofs
+Description: Creates ISO-9660 CD-ROM filesystem images
+ genisoimage is a pre-mastering program for creating ISO-9660 CD-ROM
+ filesystem images, which can then be written to CD or DVD media using
+ the wodim program. genisoimage includes support for making bootable
+ "El Torito" CDs, as well as CDs with support for the
+ Macintosh HFS filesystem.
+ .
+ The package also includes extra tools useful for working with ISO images:
+  * mkzftree - create ISO-9660 image with compressed contents
+  * dirsplit - easily separate large directory contents into disks of
+    predefined size
+  * geteltorito - extract an El Torito boot image from a CD image
+ .
+ Please install cdrkit-doc if you want most of the documentation and
+ README files.
+Original-Maintainer: Joerg Jaspert <joerg@debian.org>

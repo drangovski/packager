@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="wrapper">
+	<div>
+		<h1>Packages</h1>
+		<div class="packages-wrapper">
+			{% if packages %}
+				{% for package in packages %}
+				<div class="package">
+					<div>
+						<h2><a href="{% url 'package' package.id %}">{{ package.name }}</a></h2>
+						<p>{{ package.description|truncatechars:160 }}</p>
+						<span>Dependencies</span>
+						<ul>
+							{% for dependency in package.get_dependencies %}
+								<li>{{ dependency }}</li>
+							{% endfor %}
+						</ul>
+						<span>Reverse Dependencies</span>
+						<ul>
+							{% for dependency in package.get_reverse_dependencies %}
+								{% ifchanged dependency.package %}
+									<li>{{ dependency.package }}</li>
+								{% endifchanged %}
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+				{% endfor %}
+			{% else %}
+			<a class="load-packages" href="{% url 'load' %}">Load packages file</a>
+			{% endif %}
+		</div>
+	</div>
+</div>
+{% endblock %}
